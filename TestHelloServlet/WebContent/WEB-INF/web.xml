@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>TestHelloServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+     <param-name>company</param-name>
+     <param-value>cts</param-value>
+   </context-param>
+  <!--  HelloServlet -->
+  <servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>com.hello.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/Hello</url-pattern>
+  </servlet-mapping>
+ <!--  HelloServlet -->
+ <!--  LoginServlet -->
+  <servlet>
+     <servlet-name>Login</servlet-name>
+    <servlet-class>com.hello.LoginServlet</servlet-class>
+  
+ <init-param>
+       <param-name>userid</param-name>
+       <param-value>saurabh</param-value>
+ </init-param>
+ <init-param>
+       <param-name>password</param-name>
+       <param-value>123456</param-value>
+ </init-param>
+   </servlet>    
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Success</servlet-name>
+    <servlet-class>com.hello.SuccessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Success</servlet-name>
+    <url-pattern>/SuccessServlet</url-pattern>
+  </servlet-mapping>
+  
+
+  
+</web-app>
